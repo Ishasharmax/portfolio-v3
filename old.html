@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Isha Sharma</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/161140283197468310.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <meta name="thumbnail" content="images/logo4.jpg" />
+    <meta name="author" content="Isha Sharma" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha512-3WGIRFCuTpZhqYujwLp5RtARPkOy3uRtc3RXB31bJ9/i6VH2C66Z0WBV6gHhdhbUIDKFx8yTkLfEjdQM5Wl+ZQ==" crossorigin="anonymous"></script>
+    <script src="loader.js"></script>
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" media="screen" href="css/arrow.css">
+    <link rel="stylesheet" media="screen" href="css/menuu.css">
+</head>
+
+<body>
+
+    <!--
+    <div id="liquid" class="div3"></div>
+
+    <script>
+
+    container = document.getElementById("liquid");
+
+    const text = new Blotter.Text("BE GROOVY", {
+        size: 90,
+        fill: "#fff",
+        family: "Ladi",
+
+    });
+
+    let material = new Blotter.LiquidDistortMaterial();
+
+    material.uniforms.uSpeed.value = 0.15;
+    material.uniforms.uVolatility.value = 0.1;
+    material.uniforms.uSeed.value = 0.5;
+
+    let blotter = new Blotter(material, {
+        texts: text
+    });
+
+    let scope = blotter.forText(text);
+
+    scope.appendTo(container);
+
+</script>
+-->
+ <header>
+        <input type="checkbox" id='toggle' style='display:none;'>
+        <label for='toggle'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cursor"></div>
+
+    <section>
+        <h1 class="marg text-center">ISHA SHARMA</h1>
+        <div id="vapp">
+            <colored-box class="red" v-show="display == 'redbox'"></colored-box>
+            <colored-box class="green" v-show="display == 'greenbox'"></colored-box>
+        </div>
+
+    </section>
+
+    <section class="mb-5 pb-5">
+        <div class="container" style="margin-top:30px">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="wrapper"></div>
+                    <!--
+                    <div class="hero-title">
+                        <h3>HELLO!</h3>
+                    </div>
+-->
+                    <script src="js/hover-effect.umd.js"></script>
+
+                    <script>
+                        var hoverDistort = new hoverEffect({
+                            parent: document.querySelector('.wrapper'),
+                            intensity: 0.2,
+                            image1: 'img/img_one.jpg',
+                            image2: 'img/img_two.jpg',
+                            displacementImage: 'img/7.jpg'
+                        });
+
+                        // Wrap every letter in a span
+                        var textWrapper = document.querySelector('.hero-title');
+                        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                        $(document).ready(function() {
+
+                            $('.wrapper').hover(
+                                function() {
+                                    anime.timeline({
+                                            loop: false
+                                        })
+                                        .add({
+                                            targets: '.hero-title .letter',
+                                            translateX: [80, 0],
+                                            translateZ: 0,
+                                            opacity: [0, 1],
+                                            easing: "easeOutExpo",
+                                            duration: 1400,
+                                            delay: (el, i) => 100 + 40 * i
+                                        })
+                                },
+
+                                function() {
+                                    anime.timeline({
+                                            loop: false
+                                        })
+                                        .add({
+                                            targets: '.hero-title .letter',
+                                            translateX: [0, -80],
+                                            opacity: [1, 0],
+                                            easing: "easeInExpo",
+                                            duration: 800,
+                                            delay: (el, i) => 40 * i
+                                        });
+                                }
+                            );
+
+                        });
+                    </script>
+
+                    <!--
+                    <h5>Photo of me:</h5>
+                    <div class="fakeimg">Fake Image</div>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                    <h3>Some Links</h3>
+                    <p>Lorem ipsum dolor sit ame.</p>
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <hr class="d-sm-none">
+-->
+                </div>
+                <div class="col-sm-7 desMargin">
+                    <h2 class="text-right">DEVELOPER & </h2>
+                    <h2 class="text-right">DESIGNER BASED</h2>
+                    <h2 class="text-right">IN <span class="NYText">NEW YORK</span></h2>
+                    <!--
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg">Fake Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <div class="fakeimg">Fake Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="scrollerH mb-5 pb-5">
+
+        <div class="wrapper2">
+            <div class="circle">
+                <img id="reload" src="img-five.jpg" alt="scroll">
+            </div>
+        </div>
+        <script>
+            // index.js
+            window.onscroll = function() {
+                scrollRotate();
+            };
+
+            function scrollRotate() {
+                let image = document.getElementById("reload");
+                image.style.transform = "rotate(" + window.pageYOffset / 10 + "deg)";
+            }
+        </script>
+    </section>
+
+
+<!--
+    <div class="bg2">
+        <div class="marquee" id="showScroll">
+            <div class="marquee__inner" aria-hidden="true">
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+            </div>
+        </div>
+    </div>
+    
+    
+     <div>
+         
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+        
+    </div>
+
+
+
+    <div class="bg3">
+        <div class="marquee2" id="showScroll2">
+            <div class="marquee__inner2" aria-hidden="true">
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+                <span><i class='fab fa-python'></i></span>
+                <span><i class='fab fa-java'></i></span>
+                <span><i class='fab fa-react'></i></span>
+                <span><i class='fab fa-git-square'></i></span>
+                <span><i class='fab fa-npm'></i></span>
+                <span><i class='fab fa-r-project'></i></span>
+                <span><i class='fab fa-jira'></i></span>
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+                <span><i class='fab fa-python'></i></span>
+                <span><i class='fab fa-java'></i></span>
+                <span><i class='fab fa-react'></i></span>
+                <span><i class='fab fa-git-square'></i></span>
+                <span><i class='fab fa-npm'></i></span>
+                <span><i class='fab fa-r-project'></i></span>
+                <span><i class='fab fa-jira'></i></span>
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+
+            </div>
+        </div>
+    </div>
+-->
+    
+    
+    
+    <div class="bg22">
+        <div class="marquee" id="showScroll">
+            <div class="marquee__inner" aria-hidden="true">
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+                <span>PROJECTS</span>
+            </div>
+        </div>
+    </div>
+    
+    
+     <div>
+         
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+        
+    </div>
+
+<div class="bg33">
+        <div class="marquee2" id="showScroll2">
+            <div class="marquee__inner2" aria-hidden="true">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>SASS</span>
+                <span>JAVASCRIPT</span>
+                <span>VUE.JS</span>
+                <span>PYTHON</span>
+                <span>JAVA</span>
+                <span>REACT</span>
+                <span>GIT</span>
+                <span>NPM</span>
+                <span>RSTUDIO</span>
+                <span>JIRA</span>
+                <span>AGILE</span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg33">
+        <div class="marquee2" id="showScroll2">
+            <div class="marquee__inner2" aria-hidden="true">
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+                <span><i class='fab fa-python'></i></span>
+                <span><i class='fab fa-java'></i></span>
+                <span><i class='fab fa-react'></i></span>
+                <span><i class='fab fa-git-square'></i></span>
+                <span><i class='fab fa-npm'></i></span>
+                <span><i class='fab fa-r-project'></i></span>
+                <span><i class='fab fa-jira'></i></span>
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+                <span><i class='fab fa-python'></i></span>
+                <span><i class='fab fa-java'></i></span>
+                <span><i class='fab fa-react'></i></span>
+                <span><i class='fab fa-git-square'></i></span>
+                <span><i class='fab fa-npm'></i></span>
+                <span><i class='fab fa-r-project'></i></span>
+                <span><i class='fab fa-jira'></i></span>
+                <span><i class='fab fa-html5'></i></span>
+                <span><i class='fab fa-css3-alt'></i></span>
+                <span><i class='fab fa-sass'></i></span>
+                <span><i class='fab fa-js-square'></i></span>
+                <span><i class='fab fa-vuejs'></i></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!--
+        <div class="cursor2">
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text">codegrid</div>
+       <div class="text"><span>codegrid</span></div>
+   </div>
+   <script>
+        document.addEventListener("mousemove", e => {
+            gsap.to(".text", {
+                x: e.clientX,
+                y: e.clientY,
+                stagger: -0.02
+            });
+        });       
+   </script>
+    
+  
+    </section>
+-->
+
+
+    -->
+
+    <!--
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <p>Footer</p>
+    </div>
+-->
+    <div class="footer-dark">
+        <footer>
+            <div class="container footerContainer">
+                <div class="row mt-5 mb-5">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-6">
+                        <h3>LET'S GET<span class="NYText"> GROOVY</span></h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="container3">
+                            <ul>
+                                <li>
+                                    <a class="animated-arrow" href="https://google.com">
+                                        <span class="the-arrow -left">
+                                            <span class="shaft"></span>
+                                        </span>
+                                        <span class="main">
+                                            <span class="text">
+                                                Connect with me
+                                            </span>
+                                            <span class="the-arrow -right">
+                                                <span class="shaft"></span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+
+                </div>
+            </div>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col item social"><a href="https://twitter.com/sxdcoldsoup">TWITTER</a><a href="https://dribbble.com/ishasharmax">DRIBBBLE</a><a href="https://www.linkedin.com/in/ishasharmax/">LINKEDIN</a><a href="#">INSTAGRAM</a></div>
+                </div>
+            </div>
+            <p class="copyright">Made with love by Isha Sharma © 2021</p>
+        </footer>
+    </div>
+
+
+    <script>
+        (function() {
+
+            const link = document.querySelectorAll('nav > .hover-this');
+            const cursor = document.querySelector('.cursor');
+
+            const animateit = function(e) {
+                const span = this.querySelector('span');
+                const {
+                    offsetX: x,
+                    offsetY: y
+                } = e, {
+                    offsetWidth: width,
+                    offsetHeight: height
+                } = this,
+
+                move = 25,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
+
+                span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+                if (e.type === 'mouseleave') span.style.transform = '';
+            };
+
+            const editCursor = e => {
+                const {
+                    clientX: x,
+                    clientY: y
+                } = e;
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+            };
+
+            link.forEach(b => b.addEventListener('mousemove', animateit));
+            link.forEach(b => b.addEventListener('mouseleave', animateit));
+            window.addEventListener('mousemove', editCursor);
+
+        })();
+    </script>
+</body>
+
+</html>

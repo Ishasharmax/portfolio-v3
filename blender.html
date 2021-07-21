@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blender - Isha Sharma</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Group1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <meta name="thumbnail" content="img/Untitled_Artwork14.png" />
+    <meta name="Isha Sharma" content="Personal Porfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- AnimeJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" media="screen" href="css/arrow.css">
+    <link rel="stylesheet" media="screen" href="css/hover.css">
+</head>
+
+<body>
+
+    <div class="transition transition-2 is-active">
+        <div class="preloader">
+            <div class="counter">1</div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function counter(){
+        var count = setInterval(function(){
+            var c = parseInt($('.counter').text());
+            $('.counter').text((++c).toString());
+            if(c==10){
+                clearInterval(count);
+                $('.counter').addClass('hide');
+                $('.preloader').addClass('active');
+            }
+        },150)
+    }
+    
+    counter()
+    
+    </script>
+    <a class="sig lang" href="https://ishasharmax.github.io/" target="_blank" style="text-decoration: none;">ISHA SHARMA</a>
+
+    <header>
+        <input type="checkbox" id='toggle' style='display:none;'>
+        <label for='toggle'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <nav class="navHeader nav3">
+            <ul class="ul3">
+                <li class="li3"><a class="menuLink" href="index.html" style="text-decoration: none;">HOME</a></li>
+                <li class="li3"><a class="menuLink" href="about.html" style="text-decoration: none;">ABOUT</a></li>
+                <li class="li3"><a class="menuLink" href="portfolio.html" style="text-decoration: none;">PROJECTS</a></li>
+<!--
+                <li class="li3"><a href="mailto:1999sharma19@gmail.com" class="menuLink" style="text-decoration: none;">CONTACT ME</a></li>
+                <li class="li3"><a class="menuLink" href="music.html" style="text-decoration: none;">AURAL AESTHETICS*</a></li>
+-->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cursor"></div>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <img src="img/0000-0150.gif" class="img-fluid mx-auto widthGif">
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+
+    <h5> Blender Renders </h5>
+
+    <div class="container8">
+        <figure>
+            <img src="img/IMG_0951.JPG" class="imgBlender" alt="A windmill" />
+        </figure>
+        <figure class="landscape">
+            <img src="img/Isha4.png" class="imgBlender" alt="The Clifton Suspension Bridge" />
+        </figure>
+        <figure>
+            <img src="img/flower.PNG" class="imgBlender" alt="Sunset and boats" />
+        </figure>
+        <figure>
+            <img src="img/C45E8DC6-5038-4A77-A734-E3EDDDFB10C3.JPEG" class="imgBlender" alt="a river in the snow" />
+        </figure>
+        <figure class="landscape">
+            <img src="img/butterfly8.png" class="imgBlender" alt="a single checked balloon" />
+        </figure>
+        <figure>
+            <img src="img/bubble2.png" class="imgBlender" alt="a hot air balloon shaped like a dog" />
+        </figure>
+        <figure>
+            <img src="img/love2copy.png" class="imgBlender" alt="View from a hot air balloon of other balloons" />
+        </figure>
+        <figure class="landscape">
+            <img src="img/PF2.png" class="imgBlender" alt="sunrise over a harbor" />
+        </figure>
+        <figure>
+            <img src="img/Group%2064.png" class="imgBlender" alt="View from a hot air balloon of other balloons" />
+        </figure>
+    </div>
+
+
+    <div class="footer-dark">
+        <footer>
+             <div class="container footerContainer">
+                <div class="row mt-5 mb-5">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-6">
+                        <h3>LET'S GET<span class="NYText"> GROOVY</span></h3>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="container3">
+                            <ul>
+                                <li>
+<!--                                    <a class="animated-arrow" href="mailto:1999sharma19@gmail.com">-->
+                                        <span class="the-arrow -left">
+                                            <span class="shaft"></span>
+                                        </span>
+                                        <span class="main">
+                                            <span class="text">
+                                                Connect here!
+                                            </span>
+                                            <span class="the-arrow -right">
+                                                <span class="shaft"></span>
+                                            </span>
+                                        </span>
+<!--                                    </a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col item social"><a href="https://github.com/Ishasharmax" style="text-decoration: none;">Gh.</a><a href="https://twitter.com/sxdcoldsoup" style="text-decoration: none;">Tw.</a><a href="https://dribbble.com/Ishasharmax" style="text-decoration: none;">Dr.</a><a href="https://www.linkedin.com/in/ishasharmax/" style="text-decoration: none;">Lk.</a><a href="https://www.instagram.com/ishxshxrmx/" style="text-decoration: none;">In.</a><a href="https://ishasharmax.medium.com/" style="text-decoration: none;">Md.</a></div>
+                </div>
+            </div>
+
+            <p class="copyright  mt-5">©ISHA 2021 - ALL RIGHTS RESERVED</p>
+        </footer>
+    </div>
+
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <script>
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function() {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function(e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        $(".portfolio-item img").on("mouseenter", function() {
+            cursor.addClass("active");
+            follower.addClass("active");
+        });
+
+        $(".portfolio-item img").on("mouseleave", function() {
+            cursor.removeClass("active");
+            follower.removeClass("active");
+        });
+
+    </script>
+
+    <script src="js/hover.js"> </script>
+
+</body>
+
+</html>
